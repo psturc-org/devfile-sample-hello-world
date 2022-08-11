@@ -26,7 +26,7 @@ spec:
   - name: dockerfile
     value: Dockerfile
   pipelineRef:
-    bundle: quay.io/redhat-appstudio/build-templates-bundle:8e1bdea59a9cbf2a3d8199af74ed4cc1939eebf2
+    bundle: quay.io/redhat-appstudio/pull-request-builds:hacbs-391c42c859b1c44ded3b4ed91d8985f8246421e2
     name: docker-build
   workspaces:
   - name: workspace

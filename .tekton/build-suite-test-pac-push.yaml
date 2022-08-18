@@ -9,12 +9,12 @@ metadata:
     pipelinesascode.tekton.dev/on-target-branch: '[main]'
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: build-suite-test-application-nonp
+    appstudio.openshift.io/application: build-suite-test-application-ywkg
     appstudio.openshift.io/component: build-suite-test-pac
     build.appstudio.openshift.io/component: build-suite-test-pac
     pipelines.appstudio.openshift.io/type: build
   name: build-suite-test-pac-on-push
-  namespace: e2e-test-crky
+  namespace: e2e-test-hwan
 spec:
   params:
   - name: git-url

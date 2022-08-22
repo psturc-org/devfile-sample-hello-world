@@ -1,1 +1,1 @@
-test PaC branch appstudio-test-component-pac-vkqp update
+test PaC branch appstudio-test-component-pac-rdow update

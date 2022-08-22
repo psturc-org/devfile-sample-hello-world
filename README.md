@@ -1,1 +1,1 @@
-test PaC branch appstudio-test-component-pac-ziki update
+test PaC branch appstudio-test-component-pac-vkqp update

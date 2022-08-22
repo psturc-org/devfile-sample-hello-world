@@ -1,1 +1,1 @@
-test PaC branch appstudio-test-component-pac-eavl update
+test PaC branch appstudio-test-component-pac-oxvs update

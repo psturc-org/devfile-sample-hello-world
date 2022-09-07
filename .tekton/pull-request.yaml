@@ -1,5 +1,5 @@
 apiVersion: tekton.dev/v1beta1
-###sdasdfadsfsadfasdf
+###sdasdfadsfsadfasdfsdfa
 kind: PipelineRun
 metadata:
   name: e2e-on-pull-request
@@ -17,7 +17,7 @@ spec:
       value: "quay.io/redhat-appstudio/pull-request-builds:e2e-{{revision}}"
   pipelineRef:
     name: docker-build
-    bundle: quay.io/psturc/hacbs-templates-bundle:2022-09-07-164332
+    bundle: quay.io/psturc/hacbs-templates-bundle:2022-09-07-171009
   workspaces:
     - name: workspace
       persistentVolumeClaim:

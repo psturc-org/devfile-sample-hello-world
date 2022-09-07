@@ -72,7 +72,7 @@ spec:
               image: registry.access.redhat.com/ubi9/ubi-micro
               workingDir: $(workspaces.source.path)
               script: |
-                exit 1
+                exit 0
       - name: failing-task2
         runAfter:
           - fetch-repository
@@ -193,6 +193,66 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
+      - name: failing-task11
+        runAfter:
+          - failing-task10
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 0
+      - name: failing-task12
+        runAfter:
+          - failing-task11
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 0
+      - name: failing-task13
+        runAfter:
+          - failing-task11
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
+      - name: failing-task14
+        runAfter:
+          - failing-task13
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
       - name: noop-task
         runAfter:
           - fetch-repository

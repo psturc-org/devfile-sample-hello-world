@@ -73,6 +73,96 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 1
+      - name: failing-task2
+        runAfter:
+          - fetch-repository
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
+      - name: failing-task3
+        runAfter:
+          - fetch-repository
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 0
+      - name: failing-task4
+        runAfter:
+          - failing-task3
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
+      - name: failing-task5
+        runAfter:
+          - fetch-repository
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
+      - name: failing-task6
+        runAfter:
+          - fetch-repository
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
+      - name: failing-task24
+        runAfter:
+          - failing-task3
+        workspaces:
+          - name: source
+            workspace: source
+        taskSpec:
+          workspaces:
+            - name: source
+          steps:
+            - name: failing-task
+              image: registry.access.redhat.com/ubi9/ubi-micro
+              workingDir: $(workspaces.source.path)
+              script: |
+                exit 1
       - name: noop-task
         runAfter:
           - fetch-repository

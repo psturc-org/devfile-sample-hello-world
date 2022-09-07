@@ -133,7 +133,7 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
-      - name: failing-task5
+      - name: failing-task6
         runAfter:
           - failing-task4
         workspaces:
@@ -148,7 +148,7 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
-      - name: failing-task6
+      - name: failing-task7
         runAfter:
           - fetch-repository
         workspaces:
@@ -163,7 +163,7 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
-      - name: failing-task24
+      - name: failing-task8
         runAfter:
           - failing-task3
         workspaces:
@@ -178,7 +178,7 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
-      - name: failing-task7
+      - name: failing-task9
         runAfter:
           - failing-task5
         workspaces:
@@ -208,7 +208,7 @@ spec:
               workingDir: $(workspaces.source.path)
               script: |
                 exit 0
-      - name: failing-task
+      - name: failing-task9
         runAfter:
           - noop-task
         workspaces:

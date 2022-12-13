@@ -354,6 +354,7 @@ spec:
           requests:
             storage: 1Gi
       status: {}
+      # comment
   - name: registry-auth
     secret:
       secretName: redhat-appstudio-registry-pull-secret

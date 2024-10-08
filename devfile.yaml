@@ -4,6 +4,7 @@ metadata:
   projectType: hello-world
   version: 0.0.1
 components:
+
   - name: outerloop-build
     image:
       imageName: hello-world:latest

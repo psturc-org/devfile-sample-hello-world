@@ -11,7 +11,7 @@ metadata:
       == "default"
   creationTimestamp: null
   labels:
-    appstudio.openshift.io/application: slnodejs-todo
+    appstudio.openshift.io/application: test
     appstudio.openshift.io/component: devfile-sample-hello-world2
     pipelines.appstudio.openshift.io/type: build
   name: devfile-sample-hello-world2-on-push
@@ -23,7 +23,7 @@ spec:
   - name: revision
     value: '{{revision}}'
   - name: output-image
-    value: quay.io/redhat-user-workloads-stage/psturc-tenant/devfile-sample-hello-world2:{{revision}}
+    value: quay.io/redhat-user-workloads/psturc-tenant/devfile-sample-hello-world2:{{revision}}
   - name: dockerfile
     value: Dockerfile
   pipelineSpec:

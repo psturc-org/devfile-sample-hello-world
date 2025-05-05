@@ -11,7 +11,7 @@ spec:
             image: alpine
             script: |
               echo "Doing something..."
-              sleep 5
+              sleep 600
   finally:
     - name: check-cancelled
       params:
